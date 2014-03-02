@@ -16,32 +16,32 @@ You can install it via RubyGems:
 
 Specify from your Rakefile in an RDocTask:
 
-  require 'rdoc/task'
-  Rake::RDocTask.new do |rdoc|
-  
-    require 'jfish' #=> THIS IS IMPORTANT
+    require 'rdoc/task'
+    Rake::RDocTask.new do |rdoc|
     
-    version = File.exist?('VERSION') ? File.read('VERSION') : ""
-    
-    rdoc.rdoc_dir = 'rdoc'
-    
-    rdoc.generator = 'jfish' #=> THIS IS IMPORTANT TOO
-    
-    rdoc.title = "hipster_sql_to_hbase #{version}"
-    rdoc.rdoc_files.include('README.rdoc')
-    rdoc.rdoc_files.include('lib/**/*.rb').exclude(/lib\/adapter/,/lib\/datatype_extras.rb/)
-  end
+      require 'jfish' #=> THIS IS IMPORTANT
+      
+      version = File.exist?('VERSION') ? File.read('VERSION') : ""
+      
+      rdoc.rdoc_dir = 'rdoc'
+      
+      rdoc.generator = 'jfish' #=> THIS IS IMPORTANT TOO
+      
+      rdoc.title = "hipster_sql_to_hbase #{version}"
+      rdoc.rdoc_files.include('README.rdoc')
+      rdoc.rdoc_files.include('lib/**/*.rb').exclude(/lib\/adapter/,/lib\/datatype_extras.rb/)
+    end
   
   
 That's it. JFish will automatically register itself to RDoc when required so that all you have to do is set it as the default generator.
 
 The important parts from the above code to add to your task are these:
 
-  require 'jfish'
+  `require 'jfish'`
   
 and
   
-  rdoc.generator = 'jfish'
+  `rdoc.generator = 'jfish'`
 
 Once that's done, just call your rake task like so: `$ rake rdoc`
 
