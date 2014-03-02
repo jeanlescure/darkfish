@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.email = "jeanmlescure@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE",
-    "README",
+    "README.md",
     "README.rdoc"
   ]
-  s.files = Dir.glob("lib/**/*") + %w(.document Gemfile LICENSE LICENSE README Rakefile VERSION jfish.gemspec)
+  s.files = Dir.glob("lib/**/*") + %w(.document Gemfile LICENSE LICENSE README.md Rakefile VERSION jfish.gemspec)
   s.homepage = "http://github.com/jeanlescure/jfish"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
