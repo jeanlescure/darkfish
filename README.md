@@ -1,18 +1,18 @@
-[![jfish logo](https://github.com/jeanlescure/jfish/raw/master/lib/template/jfish/images/logo.png)]
+![jfish logo](https://github.com/jeanlescure/jfish/raw/master/lib/template/jfish/images/logo.png)
 
-= JFish Rdoc 4.0.0+ Generator
+# JFish Rdoc 4.0.0+ Generator
 
 This is a complete replacement for the default HTML generator for Rdoc 4.0.0
 
 It was forked from https://github.com/ged/darkfish and modified to look a little greener and meaner.
 
-== Getting Started
+## Getting Started
 
 You can install it via RubyGems:
 
- $ gem install jfish
+  `$ gem install jfish`
 
-== Usage
+## Usage
 
 Specify from your Rakefile in an RDocTask:
 
@@ -43,15 +43,15 @@ and
   
   rdoc.generator = 'jfish'
 
-Once that's done, just call your rake task like so: `rake rdoc`
+Once that's done, just call your rake task like so: `$ rake rdoc`
 
-== Logo
+## Logo
 
 In order to customize your rdoc with your logo simply replace the following path (relative to your generated 'rdoc' folder root):
 
-`images/logo.png`
+  `images/logo.png`
 
-== License
+## License
 
 See the LICENSE file included with the distribution for copyright and licensing details.
 
